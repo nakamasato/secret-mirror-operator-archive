@@ -1,0 +1,34 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - secret.nakamasato.com
+  resources:
+  - secretmirrors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - secret.nakamasato.com
+  resources:
+  - secretmirrors/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - secret.nakamasato.com
+  resources:
+  - secretmirrors/status
+  verbs:
+  - get
+  - patch
+  - update

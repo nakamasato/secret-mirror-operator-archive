@@ -3,4 +3,14 @@ layout:
 - go.kubebuilder.io/v3
 projectName: secret-mirror-operator-new
 repo: github.com/nakamasato/secret-mirror-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: nakamasato.com
+  group: secret
+  kind: SecretMirror
+  path: github.com/nakamasato/secret-mirror-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
