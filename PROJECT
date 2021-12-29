@@ -1,0 +1,6 @@
+domain: nakamasato.com
+layout:
+- go.kubebuilder.io/v3
+projectName: secret-mirror-operator-new
+repo: github.com/nakamasato/secret-mirror-operator
+version: "3"
